@@ -1,7 +1,6 @@
 package FindCycle;
 
 import java.util.HashSet;
-import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
@@ -17,12 +16,12 @@ public class Solution {
         System.out.println(hasCycle(n1));
     }
     public static boolean hasCycle(ListNode head) {
-      //create a hashset for nodes
+        // create a HashSet for nodes
         HashSet<ListNode> visited=new HashSet<>();
-        //set current to head
+        // set current to head
         ListNode current=head;
         while(current!=null){
-            if(visited.contains(current))return true;
+            if (visited.contains(current)) return true;
             visited.add(current);
             current=current.next;
         }

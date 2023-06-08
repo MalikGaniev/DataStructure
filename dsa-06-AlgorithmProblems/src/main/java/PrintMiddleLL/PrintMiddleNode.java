@@ -9,14 +9,17 @@ public class PrintMiddleNode {
         printMiddle(sll);
     }
     public static void printMiddle(MySinglyLinkedList sll){
-  //create two pointers
-  Node slow=sll.head;
-    Node fast=sll.head;
-//iterate over the linked list
-        while(fast!=sll.tail&&fast.next!=sll.tail){
-            slow=slow.next;//single jump
-            fast=fast.next.next;//double jump
+            //create two pointers
+        Node a=sll.head;
+        Node b=sll.head;
+           // iterate over the linked list
+        while(b!=sll.tail && b.next!=sll.tail){
+            a=a.next; // single jump
+            b=b.next.next;// double jump
         }
-        if(fast==sll.tail) System.out.println(slow.id);
-        else System.out.println(slow.id+", "+slow.next.id);
-}}
+        // b is located either on tail or before tail
+       if(b==sll.tail) System.out.println(a.id); // on tail , odd number of nodes
+       else System.out.println(a.id+","+a.next.id); // before tail , even number of nodes
+    }
+
+}

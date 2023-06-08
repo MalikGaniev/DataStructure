@@ -17,9 +17,9 @@ public class SetReview {
 
 
         System.out.println(set);
-      //  String st= "Javva Developer";
+        //String st= "Javva Developer";
 
-      //  System.out.println(firstRepeatingChar(st));
+        //System.out.println(firstRepeatingChar(st));
 
     }
     public static Character firstRepeatingChar(String str){
@@ -27,11 +27,11 @@ public class SetReview {
 
 
         // create a hashSet
-        Set<Character>ch=new HashSet<>();
-       // in here I have Space Complexity of O(n)
+        Set<Character> chars=new HashSet<>(); // in here I have Space Complexity of O(n)
         // iterate over the char array and add chars into hashSet
-for(Character character:str.toCharArray())if(!ch.add(character)) return character;
 
+
+        for(Character ch:str.toCharArray()) if (!chars.add(ch)) return ch;
         // if add ops is false return that char
 
        return null;
